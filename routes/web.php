@@ -5,6 +5,8 @@ use App\Http\Controllers\Dependent_CuntryController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\leadsController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SignUpController;
 // use App\Http\Controllers\PDFController;
 use App\Http\Controllers\UserController;
 
@@ -33,7 +35,10 @@ Route::post('/getcity/{id}',[Dependent_CuntryController::class,'City']);
 // *************************************
 //admin dashboard Route Start here
 //**************************************
-// Route::get("admin/",[]);
+Route::get("admin/",[LoginController::class,'index']);
+Route::post("admin/",[LoginController::class,'store']);
+Route::get("admin/signup",[SignUpController::class,'index']);
+Route::post("admin/signup",[SignUpController::class,'store']);
 Route::get('admin/dashboard',[AdminController::class,'index']);
 Route::get('/admin/dashboard/users',[UserController::class,'index']);
 Route::get('/admin/dashboard/faq',[FaqController::class,'index']);

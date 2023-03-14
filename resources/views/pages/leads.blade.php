@@ -14,7 +14,8 @@
 
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Upload Exel File</label>
-                        <input class="form-control" type="file" id="formFile" accept=".xlsx">
+                        <input class="form-control" type="file" id="input" accept=".xlsx">
+                        <button id="button" class="btn btn-success mt-3">convert</button>
                     </div>
 
                 </div>
@@ -49,7 +50,7 @@
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
-                            <tbody id="tbody" >
+                            <tbody id="tbody">
 
                             </tbody>
                         </table>
